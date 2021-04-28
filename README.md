@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="podcastr" title="podcastr" src=".github/logo.png" />
+  <img alt="podcastr" title="podcastr" src=".github/podcastr.svg" />
 </h1>
 
 <p align="center">
@@ -11,7 +11,7 @@
 <br>
 
 <p align="center">
-  <img alt="Podcastr" src=".github/podcastr.png" width="100%">
+  <img alt="Podcastr" src=".github/icon.svg" width="100%">
 </p>
 
 ## ✨ Tecnologias
