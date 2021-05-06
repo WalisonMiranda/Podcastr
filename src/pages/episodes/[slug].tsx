@@ -101,6 +101,7 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
         }
     })
 
+<<<<<<< HEAD
     const paths = data.map((episode: { id: string }) => {
         return {
             params: {
@@ -114,6 +115,29 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
         fallback: 'blocking'
     }
 }
+=======
+export const getStaticPaths: GetStaticPaths = async () => {
+  const { data } = await api.get("episodes", {
+    params: {
+      _limit: 12,
+      _sort: "published_at",
+      _order: "desc",
+    }
+  });
+
+  const paths = data.map(episode => ({
+    params: {
+      slug: episode.id,
+    }
+  }));
+
+  return {
+    paths,
+    fallback: "blocking",
+  };
+};
+
+>>>>>>> 8d2ecf2b708c6780ad42235582d0bd47a58a17b3
 export const getStaticProps: GetStaticProps = async (ctx) => {
     const { id } = ctx.params
     const { data } = await api.get(`/episodes/${id}`)
